@@ -1,0 +1,10 @@
+2025-01-20 11:10:08,750 INFO core [http-nio-8080-exec-4] Classname: class com.security.services.FirstFilter message is User :Admin logged in with traceid: 6bfce60b-4cd5-44b1-a4fe-bf25f867b501
+2025-01-20 11:10:15,264 INFO core [http-nio-8080-exec-5] Classname: class com.aiv.services.RoleServices message is requested available roles:
+2025-01-20 11:10:15,395 INFO core [http-nio-8080-exec-5] Classname: class com.aiv.services.RoleServices message is requested available roles:
+2025-01-20 11:10:15,479 INFO core [http-nio-8080-exec-9] Classname: class com.aiv.services.RoleServices message is requested available roles:
+2025-01-20 11:10:15,607 INFO core [http-nio-8080-exec-9] Classname: class com.aiv.services.RoleServices message is requested available roles:
+2025-01-20 12:14:33,806 INFO core [http-nio-8080-exec-2] Classname: class com.security.services.FirstFilter message is User :Admin logged in with traceid: 4aa35297-1c6e-41ad-86f2-80373f50bc74
+2025-01-20 12:14:41,077 INFO core [http-nio-8080-exec-7] Classname: class com.aiv.services.RoleServices message is requested available roles:
+2025-01-20 12:14:41,176 INFO core [http-nio-8080-exec-8] Classname: class com.aiv.services.RoleServices message is requested available roles:
+2025-01-20 12:14:41,206 INFO core [http-nio-8080-exec-7] Classname: class com.aiv.services.RoleServices message is requested available roles:
+2025-01-20 12:14:41,290 INFO core [http-nio-8080-exec-8] Classname: class com.aiv.services.RoleServices message is requested available roles:

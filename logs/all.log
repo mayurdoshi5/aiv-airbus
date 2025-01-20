@@ -1,0 +1,965 @@
+2025-01-20 10:35:16,070 INFO com.aiv.core.aiv.AivApplication [main] Starting AivApplication v6.0.0 using Java 17.0.2 on 130b9b9b7f40 with PID 1 (/opt/run.jar started by root in /opt)
+2025-01-20 10:35:16,084 INFO com.aiv.core.aiv.AivApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-01-20 10:35:34,288 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-01-20 10:35:34,291 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-01-20 10:35:34,418 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 117 ms. Found 0 JDBC repository interfaces.
+2025-01-20 10:35:34,442 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-01-20 10:35:34,443 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-20 10:35:34,552 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 92 ms. Found 0 JPA repository interfaces.
+2025-01-20 10:35:39,458 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2025-01-20 10:35:39,490 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-20 10:35:39,520 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2025-01-20 10:35:39,521 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-01-20 10:35:44,444 INFO org.apache.jasper.servlet.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-01-20 10:35:45,307 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/aiv] [main] Initializing Spring embedded WebApplicationContext
+2025-01-20 10:35:45,308 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 28910 ms
+2025-01-20 10:35:46,816 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityLiquibase' defined in class path resource [com/aiv/core/aiv/LiquibaseConfig.class]: Invocation of init method failed; nested exception is liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.DatabaseException: java.sql.SQLException: Cannot create PoolableConnectionFactory (Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.)
+2025-01-20 10:35:46,826 INFO org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
+2025-01-20 10:35:46,839 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] JDBC driver de-registration failed for web application [apps]
+java.lang.NullPointerException: Cannot invoke "java.io.InputStream.read(byte[], int, int)" because "is" is null
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:1728)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:1666)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:1602)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:463)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5515)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1412)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1401)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:986)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1412)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1401)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:986)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:497)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:982)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:496)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:273)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stop(TomcatWebServer.java:331)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:152)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at com.aiv.core.aiv.AivApplication.main(AivApplication.java:210)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.PropertiesLauncher.main(PropertiesLauncher.java:467)
+2025-01-20 10:35:46,841 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.base/java.io=ALL-UNNAMED" to the JVM command line arguments to enable ObjectStream cache memory leak protection. Alternatively, you can suppress this warning by disabling ObjectStream class cache memory leak protection.
+2025-01-20 10:35:46,842 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.base/java.lang=ALL-UNNAMED" to the JVM command line arguments to enable ThreadLocal memory leak detection. Alternatively, you can suppress this warning by disabling ThreadLocal memory leak detection.
+2025-01-20 10:35:46,849 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED" to the JVM command line arguments to enable RMI Target memory leak detection. Alternatively, you can suppress this warning by disabling RMI Target memory leak detection.
+2025-01-20 10:35:47,353 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] JDBC driver de-registration failed for web application [appimages]
+java.lang.NullPointerException: Cannot invoke "java.io.InputStream.read(byte[], int, int)" because "is" is null
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:1728)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:1666)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:1602)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:463)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5515)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1412)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1401)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:986)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1412)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1401)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:986)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:497)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:982)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:496)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:273)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stop(TomcatWebServer.java:331)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:152)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at com.aiv.core.aiv.AivApplication.main(AivApplication.java:210)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.PropertiesLauncher.main(PropertiesLauncher.java:467)
+2025-01-20 10:35:47,354 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.base/java.io=ALL-UNNAMED" to the JVM command line arguments to enable ObjectStream cache memory leak protection. Alternatively, you can suppress this warning by disabling ObjectStream class cache memory leak protection.
+2025-01-20 10:35:47,354 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.base/java.lang=ALL-UNNAMED" to the JVM command line arguments to enable ThreadLocal memory leak detection. Alternatively, you can suppress this warning by disabling ThreadLocal memory leak detection.
+2025-01-20 10:35:47,355 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED" to the JVM command line arguments to enable RMI Target memory leak detection. Alternatively, you can suppress this warning by disabling RMI Target memory leak detection.
+2025-01-20 10:35:47,413 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-01-20 10:35:47,503 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityLiquibase' defined in class path resource [com/aiv/core/aiv/LiquibaseConfig.class]: Invocation of init method failed; nested exception is liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.DatabaseException: java.sql.SQLException: Cannot create PoolableConnectionFactory (Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at com.aiv.core.aiv.AivApplication.main(AivApplication.java:210)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.PropertiesLauncher.main(PropertiesLauncher.java:467)
+Caused by: liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.DatabaseException: java.sql.SQLException: Cannot create PoolableConnectionFactory (Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:259)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 24 common frames omitted
+Caused by: liquibase.exception.DatabaseException: java.sql.SQLException: Cannot create PoolableConnectionFactory (Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:251)
+	at liquibase.Scope.lambda$child$0(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:168)
+	at liquibase.Scope.child(Scope.java:256)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:242)
+	... 26 common frames omitted
+Caused by: java.sql.SQLException: Cannot create PoolableConnectionFactory (Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:653)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:532)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:731)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208)
+	at jdk.proxy3/jdk.proxy3.$Proxy81.getConnection(Unknown Source)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:246)
+	... 32 common frames omitted
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:303)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225)
+	at org.postgresql.Driver.makeConnection(Driver.java:465)
+	at org.postgresql.Driver.connect(Driver.java:264)
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52)
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:415)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:111)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:649)
+	... 42 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:231)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:95)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+	... 50 common frames omitted
+2025-01-20 10:39:05,378 INFO com.aiv.core.aiv.AivApplication [main] Starting AivApplication v6.0.0 using Java 17.0.2 on ac3e1db28ae9 with PID 1 (/opt/run.jar started by root in /opt)
+2025-01-20 10:39:05,388 INFO com.aiv.core.aiv.AivApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-01-20 10:39:23,231 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-01-20 10:39:23,237 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-01-20 10:39:23,382 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 131 ms. Found 0 JDBC repository interfaces.
+2025-01-20 10:39:23,410 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-01-20 10:39:23,413 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-20 10:39:23,538 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 104 ms. Found 0 JPA repository interfaces.
+2025-01-20 10:39:28,964 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2025-01-20 10:39:29,000 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-20 10:39:29,033 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2025-01-20 10:39:29,034 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-01-20 10:39:33,688 INFO org.apache.jasper.servlet.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-01-20 10:39:34,627 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/aiv] [main] Initializing Spring embedded WebApplicationContext
+2025-01-20 10:39:34,628 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 28940 ms
+2025-01-20 10:39:36,826 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityLiquibase' defined in class path resource [com/aiv/core/aiv/LiquibaseConfig.class]: Invocation of init method failed; nested exception is liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.DatabaseException: java.sql.SQLException: Cannot create PoolableConnectionFactory (FATAL: database "aiv6" does not exist)
+2025-01-20 10:39:36,835 INFO org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
+2025-01-20 10:39:36,877 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] JDBC driver de-registration failed for web application [apps]
+java.lang.NullPointerException: Cannot invoke "java.io.InputStream.read(byte[], int, int)" because "is" is null
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:1728)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:1666)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:1602)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:463)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5515)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1412)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1401)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:986)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1412)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1401)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:986)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:497)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:982)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:496)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:273)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stop(TomcatWebServer.java:331)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:152)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at com.aiv.core.aiv.AivApplication.main(AivApplication.java:210)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.PropertiesLauncher.main(PropertiesLauncher.java:467)
+2025-01-20 10:39:36,885 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.base/java.io=ALL-UNNAMED" to the JVM command line arguments to enable ObjectStream cache memory leak protection. Alternatively, you can suppress this warning by disabling ObjectStream class cache memory leak protection.
+2025-01-20 10:39:36,887 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.base/java.lang=ALL-UNNAMED" to the JVM command line arguments to enable ThreadLocal memory leak detection. Alternatively, you can suppress this warning by disabling ThreadLocal memory leak detection.
+2025-01-20 10:39:36,899 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED" to the JVM command line arguments to enable RMI Target memory leak detection. Alternatively, you can suppress this warning by disabling RMI Target memory leak detection.
+2025-01-20 10:39:37,368 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] JDBC driver de-registration failed for web application [appimages]
+java.lang.NullPointerException: Cannot invoke "java.io.InputStream.read(byte[], int, int)" because "is" is null
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:1728)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:1666)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:1602)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:463)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5515)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1412)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1401)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:986)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1412)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1401)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:986)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:497)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:982)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:496)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:273)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stop(TomcatWebServer.java:331)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:152)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at com.aiv.core.aiv.AivApplication.main(AivApplication.java:210)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.PropertiesLauncher.main(PropertiesLauncher.java:467)
+2025-01-20 10:39:37,376 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.base/java.io=ALL-UNNAMED" to the JVM command line arguments to enable ObjectStream cache memory leak protection. Alternatively, you can suppress this warning by disabling ObjectStream class cache memory leak protection.
+2025-01-20 10:39:37,376 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.base/java.lang=ALL-UNNAMED" to the JVM command line arguments to enable ThreadLocal memory leak detection. Alternatively, you can suppress this warning by disabling ThreadLocal memory leak detection.
+2025-01-20 10:39:37,377 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED" to the JVM command line arguments to enable RMI Target memory leak detection. Alternatively, you can suppress this warning by disabling RMI Target memory leak detection.
+2025-01-20 10:39:37,442 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-01-20 10:39:37,542 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityLiquibase' defined in class path resource [com/aiv/core/aiv/LiquibaseConfig.class]: Invocation of init method failed; nested exception is liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.DatabaseException: java.sql.SQLException: Cannot create PoolableConnectionFactory (FATAL: database "aiv6" does not exist)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at com.aiv.core.aiv.AivApplication.main(AivApplication.java:210)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.PropertiesLauncher.main(PropertiesLauncher.java:467)
+Caused by: liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.DatabaseException: java.sql.SQLException: Cannot create PoolableConnectionFactory (FATAL: database "aiv6" does not exist)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:259)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 24 common frames omitted
+Caused by: liquibase.exception.DatabaseException: java.sql.SQLException: Cannot create PoolableConnectionFactory (FATAL: database "aiv6" does not exist)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:251)
+	at liquibase.Scope.lambda$child$0(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:168)
+	at liquibase.Scope.child(Scope.java:256)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:242)
+	... 26 common frames omitted
+Caused by: java.sql.SQLException: Cannot create PoolableConnectionFactory (FATAL: database "aiv6" does not exist)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:653)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:532)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:731)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208)
+	at jdk.proxy3/jdk.proxy3.$Proxy81.getConnection(Unknown Source)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:246)
+	... 32 common frames omitted
+Caused by: org.postgresql.util.PSQLException: FATAL: database "aiv6" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2565)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2677)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:147)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:273)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225)
+	at org.postgresql.Driver.makeConnection(Driver.java:465)
+	at org.postgresql.Driver.connect(Driver.java:264)
+	at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52)
+	at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:415)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:111)
+	at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:649)
+	... 42 common frames omitted
+2025-01-20 10:58:35,653 INFO com.aiv.core.aiv.AivApplication [main] Starting AivApplication v6.0.0 using Java 17.0.2 on ac3e1db28ae9 with PID 1 (/opt/run.jar started by root in /opt)
+2025-01-20 10:58:35,661 INFO com.aiv.core.aiv.AivApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-01-20 10:58:54,407 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-01-20 10:58:54,417 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-01-20 10:58:54,578 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 146 ms. Found 0 JDBC repository interfaces.
+2025-01-20 10:58:54,610 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-01-20 10:58:54,615 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-20 10:58:54,738 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 108 ms. Found 0 JPA repository interfaces.
+2025-01-20 10:59:00,021 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2025-01-20 10:59:00,063 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-20 10:59:00,111 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2025-01-20 10:59:00,112 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-01-20 10:59:05,697 INFO org.apache.jasper.servlet.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-01-20 10:59:06,641 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/aiv] [main] Initializing Spring embedded WebApplicationContext
+2025-01-20 10:59:06,642 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 30722 ms
+2025-01-20 10:59:14,703 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aivLiquibase' defined in class path resource [com/aiv/core/aiv/LiquibaseConfig.class]: Invocation of init method failed; nested exception is liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-aiv.sql::1::author:
+     Reason: liquibase.exception.DatabaseException: ERROR: permission denied for language c [Failed SQL: (0) CREATE EXTENSION IF NOT EXISTS intarray]
+2025-01-20 10:59:14,722 INFO org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
+2025-01-20 10:59:14,731 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] JDBC driver de-registration failed for web application [apps]
+java.lang.NullPointerException: Cannot invoke "java.io.InputStream.read(byte[], int, int)" because "is" is null
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:1728)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:1666)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:1602)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:463)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5515)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1412)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1401)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:986)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1412)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1401)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:986)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:497)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:982)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:496)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:273)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stop(TomcatWebServer.java:331)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:152)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at com.aiv.core.aiv.AivApplication.main(AivApplication.java:210)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.PropertiesLauncher.main(PropertiesLauncher.java:467)
+2025-01-20 10:59:14,736 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.base/java.io=ALL-UNNAMED" to the JVM command line arguments to enable ObjectStream cache memory leak protection. Alternatively, you can suppress this warning by disabling ObjectStream class cache memory leak protection.
+2025-01-20 10:59:14,738 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.base/java.lang=ALL-UNNAMED" to the JVM command line arguments to enable ThreadLocal memory leak detection. Alternatively, you can suppress this warning by disabling ThreadLocal memory leak detection.
+2025-01-20 10:59:14,745 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED" to the JVM command line arguments to enable RMI Target memory leak detection. Alternatively, you can suppress this warning by disabling RMI Target memory leak detection.
+2025-01-20 10:59:15,329 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] JDBC driver de-registration failed for web application [appimages]
+java.lang.NullPointerException: Cannot invoke "java.io.InputStream.read(byte[], int, int)" because "is" is null
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:1728)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:1666)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:1602)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:463)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5515)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1412)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1401)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:986)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1412)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1401)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:986)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:497)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:982)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:496)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:273)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stop(TomcatWebServer.java:331)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:152)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at com.aiv.core.aiv.AivApplication.main(AivApplication.java:210)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.PropertiesLauncher.main(PropertiesLauncher.java:467)
+2025-01-20 10:59:15,335 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.base/java.io=ALL-UNNAMED" to the JVM command line arguments to enable ObjectStream cache memory leak protection. Alternatively, you can suppress this warning by disabling ObjectStream class cache memory leak protection.
+2025-01-20 10:59:15,336 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.base/java.lang=ALL-UNNAMED" to the JVM command line arguments to enable ThreadLocal memory leak detection. Alternatively, you can suppress this warning by disabling ThreadLocal memory leak detection.
+2025-01-20 10:59:15,339 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED" to the JVM command line arguments to enable RMI Target memory leak detection. Alternatively, you can suppress this warning by disabling RMI Target memory leak detection.
+2025-01-20 10:59:15,433 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-01-20 10:59:15,554 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aivLiquibase' defined in class path resource [com/aiv/core/aiv/LiquibaseConfig.class]: Invocation of init method failed; nested exception is liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-aiv.sql::1::author:
+     Reason: liquibase.exception.DatabaseException: ERROR: permission denied for language c [Failed SQL: (0) CREATE EXTENSION IF NOT EXISTS intarray]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at com.aiv.core.aiv.AivApplication.main(AivApplication.java:210)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.PropertiesLauncher.main(PropertiesLauncher.java:467)
+Caused by: liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-aiv.sql::1::author:
+     Reason: liquibase.exception.DatabaseException: ERROR: permission denied for language c [Failed SQL: (0) CREATE EXTENSION IF NOT EXISTS intarray]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:259)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 24 common frames omitted
+Caused by: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-aiv.sql::1::author:
+     Reason: liquibase.exception.DatabaseException: ERROR: permission denied for language c [Failed SQL: (0) CREATE EXTENSION IF NOT EXISTS intarray]
+	at liquibase.command.CommandScope.execute(CommandScope.java:257)
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:245)
+	at liquibase.Scope.lambda$child$0(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:168)
+	at liquibase.Liquibase.runInScope(Liquibase.java:1436)
+	at liquibase.Liquibase.update(Liquibase.java:234)
+	at liquibase.Liquibase.update(Liquibase.java:212)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:297)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:249)
+	at liquibase.Scope.lambda$child$0(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:168)
+	at liquibase.Scope.child(Scope.java:256)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:242)
+	... 26 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-aiv.sql::1::author:
+     Reason: liquibase.exception.DatabaseException: ERROR: permission denied for language c [Failed SQL: (0) CREATE EXTENSION IF NOT EXISTS intarray]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:151)
+	at liquibase.command.core.AbstractUpdateCommandStep.lambda$run$0(AbstractUpdateCommandStep.java:112)
+	at liquibase.Scope.lambda$child$0(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:168)
+	at liquibase.command.core.AbstractUpdateCommandStep.run(AbstractUpdateCommandStep.java:110)
+	at liquibase.command.core.UpdateCommandStep.run(UpdateCommandStep.java:105)
+	at liquibase.command.CommandScope.execute(CommandScope.java:219)
+	... 42 common frames omitted
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-aiv.sql::1::author:
+     Reason: liquibase.exception.DatabaseException: ERROR: permission denied for language c [Failed SQL: (0) CREATE EXTENSION IF NOT EXISTS intarray]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:808)
+	at liquibase.changelog.visitor.UpdateVisitor.executeAcceptedChange(UpdateVisitor.java:119)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:68)
+	at liquibase.changelog.ChangeLogIterator$2.lambda$run$0(ChangeLogIterator.java:133)
+	at liquibase.Scope.lambda$child$0(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:168)
+	at liquibase.changelog.ChangeLogIterator$2.run(ChangeLogIterator.java:122)
+	at liquibase.Scope.lambda$child$0(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:168)
+	at liquibase.Scope.child(Scope.java:256)
+	at liquibase.Scope.child(Scope.java:260)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:89)
+	... 50 common frames omitted
+Caused by: liquibase.exception.DatabaseException: ERROR: permission denied for language c [Failed SQL: (0) CREATE EXTENSION IF NOT EXISTS intarray]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:473)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:80)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:182)
+	at liquibase.executor.AbstractExecutor.execute(AbstractExecutor.java:141)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1176)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:764)
+	... 65 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: permission denied for language c
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2565)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2297)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:279)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:193)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:193)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:467)
+	... 70 common frames omitted
+2025-01-20 11:02:44,867 INFO com.aiv.core.aiv.AivApplication [main] Starting AivApplication v6.0.0 using Java 17.0.2 on ac3e1db28ae9 with PID 1 (/opt/run.jar started by root in /opt)
+2025-01-20 11:02:44,877 INFO com.aiv.core.aiv.AivApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-01-20 11:03:02,888 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-01-20 11:03:02,895 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-01-20 11:03:03,047 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 133 ms. Found 0 JDBC repository interfaces.
+2025-01-20 11:03:03,085 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-01-20 11:03:03,090 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-20 11:03:03,207 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 96 ms. Found 0 JPA repository interfaces.
+2025-01-20 11:03:09,018 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2025-01-20 11:03:09,069 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-20 11:03:09,103 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2025-01-20 11:03:09,104 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-01-20 11:03:14,207 INFO org.apache.jasper.servlet.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-01-20 11:03:15,090 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/aiv] [main] Initializing Spring embedded WebApplicationContext
+2025-01-20 11:03:15,091 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 29982 ms
+2025-01-20 11:03:23,324 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aivLiquibase' defined in class path resource [com/aiv/core/aiv/LiquibaseConfig.class]: Invocation of init method failed; nested exception is liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-aiv.sql::1::author:
+     Reason: liquibase.exception.DatabaseException: ERROR: permission denied for language c [Failed SQL: (0) CREATE EXTENSION IF NOT EXISTS intarray]
+2025-01-20 11:03:23,333 INFO org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
+2025-01-20 11:03:23,346 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] JDBC driver de-registration failed for web application [apps]
+java.lang.NullPointerException: Cannot invoke "java.io.InputStream.read(byte[], int, int)" because "is" is null
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:1728)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:1666)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:1602)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:463)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5515)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1412)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1401)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:986)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1412)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1401)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:986)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:497)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:982)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:496)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:273)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stop(TomcatWebServer.java:331)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:152)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at com.aiv.core.aiv.AivApplication.main(AivApplication.java:210)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.PropertiesLauncher.main(PropertiesLauncher.java:467)
+2025-01-20 11:03:23,351 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.base/java.io=ALL-UNNAMED" to the JVM command line arguments to enable ObjectStream cache memory leak protection. Alternatively, you can suppress this warning by disabling ObjectStream class cache memory leak protection.
+2025-01-20 11:03:23,352 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.base/java.lang=ALL-UNNAMED" to the JVM command line arguments to enable ThreadLocal memory leak detection. Alternatively, you can suppress this warning by disabling ThreadLocal memory leak detection.
+2025-01-20 11:03:23,360 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED" to the JVM command line arguments to enable RMI Target memory leak detection. Alternatively, you can suppress this warning by disabling RMI Target memory leak detection.
+2025-01-20 11:03:23,920 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] JDBC driver de-registration failed for web application [appimages]
+java.lang.NullPointerException: Cannot invoke "java.io.InputStream.read(byte[], int, int)" because "is" is null
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:1728)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:1666)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:1602)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:463)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5515)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1412)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1401)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:986)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1412)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1401)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:986)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:497)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:982)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:496)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:273)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stop(TomcatWebServer.java:331)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:152)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at com.aiv.core.aiv.AivApplication.main(AivApplication.java:210)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.PropertiesLauncher.main(PropertiesLauncher.java:467)
+2025-01-20 11:03:23,927 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.base/java.io=ALL-UNNAMED" to the JVM command line arguments to enable ObjectStream cache memory leak protection. Alternatively, you can suppress this warning by disabling ObjectStream class cache memory leak protection.
+2025-01-20 11:03:23,928 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.base/java.lang=ALL-UNNAMED" to the JVM command line arguments to enable ThreadLocal memory leak detection. Alternatively, you can suppress this warning by disabling ThreadLocal memory leak detection.
+2025-01-20 11:03:23,929 WARN org.apache.catalina.loader.WebappClassLoaderBase [main] When running on Java 9 or later you need to add "--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED" to the JVM command line arguments to enable RMI Target memory leak detection. Alternatively, you can suppress this warning by disabling RMI Target memory leak detection.
+2025-01-20 11:03:24,040 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-01-20 11:03:24,109 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aivLiquibase' defined in class path resource [com/aiv/core/aiv/LiquibaseConfig.class]: Invocation of init method failed; nested exception is liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-aiv.sql::1::author:
+     Reason: liquibase.exception.DatabaseException: ERROR: permission denied for language c [Failed SQL: (0) CREATE EXTENSION IF NOT EXISTS intarray]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at com.aiv.core.aiv.AivApplication.main(AivApplication.java:210)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.PropertiesLauncher.main(PropertiesLauncher.java:467)
+Caused by: liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-aiv.sql::1::author:
+     Reason: liquibase.exception.DatabaseException: ERROR: permission denied for language c [Failed SQL: (0) CREATE EXTENSION IF NOT EXISTS intarray]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:259)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 24 common frames omitted
+Caused by: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-aiv.sql::1::author:
+     Reason: liquibase.exception.DatabaseException: ERROR: permission denied for language c [Failed SQL: (0) CREATE EXTENSION IF NOT EXISTS intarray]
+	at liquibase.command.CommandScope.execute(CommandScope.java:257)
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:245)
+	at liquibase.Scope.lambda$child$0(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:168)
+	at liquibase.Liquibase.runInScope(Liquibase.java:1436)
+	at liquibase.Liquibase.update(Liquibase.java:234)
+	at liquibase.Liquibase.update(Liquibase.java:212)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:297)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:249)
+	at liquibase.Scope.lambda$child$0(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:168)
+	at liquibase.Scope.child(Scope.java:256)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:242)
+	... 26 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-aiv.sql::1::author:
+     Reason: liquibase.exception.DatabaseException: ERROR: permission denied for language c [Failed SQL: (0) CREATE EXTENSION IF NOT EXISTS intarray]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:151)
+	at liquibase.command.core.AbstractUpdateCommandStep.lambda$run$0(AbstractUpdateCommandStep.java:112)
+	at liquibase.Scope.lambda$child$0(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:168)
+	at liquibase.command.core.AbstractUpdateCommandStep.run(AbstractUpdateCommandStep.java:110)
+	at liquibase.command.core.UpdateCommandStep.run(UpdateCommandStep.java:105)
+	at liquibase.command.CommandScope.execute(CommandScope.java:219)
+	... 42 common frames omitted
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-aiv.sql::1::author:
+     Reason: liquibase.exception.DatabaseException: ERROR: permission denied for language c [Failed SQL: (0) CREATE EXTENSION IF NOT EXISTS intarray]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:808)
+	at liquibase.changelog.visitor.UpdateVisitor.executeAcceptedChange(UpdateVisitor.java:119)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:68)
+	at liquibase.changelog.ChangeLogIterator$2.lambda$run$0(ChangeLogIterator.java:133)
+	at liquibase.Scope.lambda$child$0(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:168)
+	at liquibase.changelog.ChangeLogIterator$2.run(ChangeLogIterator.java:122)
+	at liquibase.Scope.lambda$child$0(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:168)
+	at liquibase.Scope.child(Scope.java:256)
+	at liquibase.Scope.child(Scope.java:260)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:89)
+	... 50 common frames omitted
+Caused by: liquibase.exception.DatabaseException: ERROR: permission denied for language c [Failed SQL: (0) CREATE EXTENSION IF NOT EXISTS intarray]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:473)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:80)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:182)
+	at liquibase.executor.AbstractExecutor.execute(AbstractExecutor.java:141)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1176)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:764)
+	... 65 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: permission denied for language c
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2565)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2297)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:279)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:193)
+	at org.apache.tomcat.dbcp.dbcp2.DelegatingStatement.execute(DelegatingStatement.java:193)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:467)
+	... 70 common frames omitted
+2025-01-20 11:08:51,551 INFO com.aiv.core.aiv.AivApplication [main] Starting AivApplication v6.0.0 using Java 17.0.2 on 5e0759be87db with PID 1 (/opt/run.jar started by root in /opt)
+2025-01-20 11:08:51,559 INFO com.aiv.core.aiv.AivApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-01-20 11:09:09,873 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-01-20 11:09:09,879 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-01-20 11:09:10,023 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 127 ms. Found 0 JDBC repository interfaces.
+2025-01-20 11:09:10,054 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-01-20 11:09:10,057 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-20 11:09:10,189 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 112 ms. Found 0 JPA repository interfaces.
+2025-01-20 11:09:15,628 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2025-01-20 11:09:15,664 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-20 11:09:15,697 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2025-01-20 11:09:15,701 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-01-20 11:09:20,588 INFO org.apache.jasper.servlet.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-01-20 11:09:21,506 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/aiv] [main] Initializing Spring embedded WebApplicationContext
+2025-01-20 11:09:21,507 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 29732 ms
+2025-01-20 11:09:31,425 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-20 11:09:31,675 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.10.Final
+2025-01-20 11:09:32,276 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-01-20 11:09:32,801 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2025-01-20 11:09:33,585 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-01-20 11:09:33,612 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-20 11:09:34,571 INFO org.springframework.jdbc.core.metadata.TableMetaDataProvider [main] Unable to locate table meta-data for 'ai_license': column names must be provided
+2025-01-20 11:09:35,914 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-20 11:09:36,810 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [main] Adding welcome page: class path resource [static/index.html]
+2025-01-20 11:09:39,112 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-01-20 11:09:39,214 INFO org.apache.coyote.http11.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-01-20 11:09:39,376 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path '/aiv'
+2025-01-20 11:09:39,441 INFO com.aiv.core.aiv.AivApplication [main] Started AivApplication in 50.487 seconds (JVM running for 55.003)
+2025-01-20 11:10:00,080 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/aiv] [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-20 11:10:00,080 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2025-01-20 11:10:00,093 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Completed initialization in 12 ms
+2025-01-20 11:10:10,757 INFO security [http-nio-8080-exec-2] Classname: class com.security.services.SimpleAuthImpl message is {"Traceid":"","message":" Reading user Default properties is reuqired: Admin"}
+2025-01-20 12:05:02,448 INFO com.aiv.core.aiv.AivApplication [main] Starting AivApplication v6.0.0 using Java 17.0.2 on 5e0759be87db with PID 1 (/opt/run.jar started by root in /opt)
+2025-01-20 12:05:02,463 INFO com.aiv.core.aiv.AivApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-01-20 12:05:21,597 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-01-20 12:05:21,606 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-01-20 12:05:21,745 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 123 ms. Found 0 JDBC repository interfaces.
+2025-01-20 12:05:21,774 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-01-20 12:05:21,777 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-20 12:05:21,905 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 106 ms. Found 0 JPA repository interfaces.
+2025-01-20 12:05:26,945 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2025-01-20 12:05:26,979 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-20 12:05:27,016 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2025-01-20 12:05:27,022 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-01-20 12:05:31,698 INFO org.apache.jasper.servlet.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-01-20 12:05:32,688 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/aiv] [main] Initializing Spring embedded WebApplicationContext
+2025-01-20 12:05:32,689 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 29883 ms
+2025-01-20 12:05:42,363 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-20 12:05:42,553 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.10.Final
+2025-01-20 12:05:43,038 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-01-20 12:05:43,576 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2025-01-20 12:05:44,345 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-01-20 12:05:44,376 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-20 12:05:45,206 INFO org.springframework.jdbc.core.metadata.TableMetaDataProvider [main] Unable to locate table meta-data for 'ai_license': column names must be provided
+2025-01-20 12:05:46,530 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-20 12:05:47,299 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [main] Adding welcome page: class path resource [static/index.html]
+2025-01-20 12:05:48,860 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-01-20 12:05:48,962 INFO org.apache.coyote.http11.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-01-20 12:05:49,041 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path '/aiv'
+2025-01-20 12:05:49,106 INFO com.aiv.core.aiv.AivApplication [main] Started AivApplication in 49.464 seconds (JVM running for 53.683)
+2025-01-20 12:08:35,599 INFO com.aiv.core.aiv.AivApplication [main] Starting AivApplication v6.0.0 using Java 17.0.2 on 75898de6c001 with PID 1 (/opt/run.jar started by root in /opt)
+2025-01-20 12:08:35,613 INFO com.aiv.core.aiv.AivApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-01-20 12:08:53,311 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-01-20 12:08:53,317 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-01-20 12:08:53,462 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 127 ms. Found 0 JDBC repository interfaces.
+2025-01-20 12:08:53,491 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-01-20 12:08:53,493 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-20 12:08:53,606 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 97 ms. Found 0 JPA repository interfaces.
+2025-01-20 12:08:59,435 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2025-01-20 12:08:59,479 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-20 12:08:59,524 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2025-01-20 12:08:59,527 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-01-20 12:09:05,128 INFO org.apache.jasper.servlet.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-01-20 12:09:06,022 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/aiv] [main] Initializing Spring embedded WebApplicationContext
+2025-01-20 12:09:06,025 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 30131 ms
+2025-01-20 12:09:14,486 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-20 12:09:14,769 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.10.Final
+2025-01-20 12:09:15,461 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-01-20 12:09:15,982 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2025-01-20 12:09:16,862 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-01-20 12:09:16,892 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-20 12:09:19,695 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-20 12:09:20,857 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [main] Adding welcome page: class path resource [static/index.html]
+2025-01-20 12:09:23,312 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-01-20 12:09:23,456 INFO org.apache.coyote.http11.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-01-20 12:09:23,599 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path '/aiv'
+2025-01-20 12:09:23,661 INFO com.aiv.core.aiv.AivApplication [main] Started AivApplication in 50.689 seconds (JVM running for 55.512)
+2025-01-20 12:09:36,146 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-20 12:10:27,762 INFO com.aiv.core.aiv.AivApplication [main] Starting AivApplication v6.0.0 using Java 17.0.2 on 75898de6c001 with PID 1 (/opt/run.jar started by root in /opt)
+2025-01-20 12:10:27,780 INFO com.aiv.core.aiv.AivApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-01-20 12:10:46,951 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-01-20 12:10:46,957 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-01-20 12:10:47,114 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 139 ms. Found 0 JDBC repository interfaces.
+2025-01-20 12:10:47,158 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-01-20 12:10:47,165 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-20 12:10:47,296 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 110 ms. Found 0 JPA repository interfaces.
+2025-01-20 12:10:53,203 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2025-01-20 12:10:53,248 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-20 12:10:53,288 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2025-01-20 12:10:53,288 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-01-20 12:10:58,460 INFO org.apache.jasper.servlet.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-01-20 12:10:59,393 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/aiv] [main] Initializing Spring embedded WebApplicationContext
+2025-01-20 12:10:59,396 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 31329 ms
+2025-01-20 12:11:08,168 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-20 12:11:08,513 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.10.Final
+2025-01-20 12:11:09,209 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-01-20 12:11:09,671 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2025-01-20 12:11:10,458 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-01-20 12:11:10,500 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-20 12:11:25,909 INFO com.aiv.core.aiv.AivApplication [main] Starting AivApplication v6.0.0 using Java 17.0.2 on 215647e80ed9 with PID 1 (/opt/run.jar started by root in /opt)
+2025-01-20 12:11:25,925 INFO com.aiv.core.aiv.AivApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-01-20 12:11:43,945 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-01-20 12:11:43,952 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-01-20 12:11:44,140 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 171 ms. Found 0 JDBC repository interfaces.
+2025-01-20 12:11:44,170 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-01-20 12:11:44,175 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-20 12:11:44,325 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 128 ms. Found 0 JPA repository interfaces.
+2025-01-20 12:11:49,867 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2025-01-20 12:11:49,907 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-20 12:11:49,945 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2025-01-20 12:11:49,946 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-01-20 12:11:55,368 INFO org.apache.jasper.servlet.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-01-20 12:11:56,503 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/aiv] [main] Initializing Spring embedded WebApplicationContext
+2025-01-20 12:11:56,505 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 30323 ms
+2025-01-20 12:13:37,977 INFO com.aiv.core.aiv.AivApplication [main] Starting AivApplication v6.0.0 using Java 17.0.2 on 0acbe5314bd0 with PID 1 (/opt/run.jar started by root in /opt)
+2025-01-20 12:13:37,989 INFO com.aiv.core.aiv.AivApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-01-20 12:13:55,747 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-01-20 12:13:55,753 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-01-20 12:13:55,897 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 128 ms. Found 0 JDBC repository interfaces.
+2025-01-20 12:13:55,919 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-01-20 12:13:55,921 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-20 12:13:56,023 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 85 ms. Found 0 JPA repository interfaces.
+2025-01-20 12:14:00,978 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2025-01-20 12:14:01,017 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-20 12:14:01,090 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2025-01-20 12:14:01,090 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2025-01-20 12:14:06,101 INFO org.apache.jasper.servlet.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-01-20 12:14:07,040 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/aiv] [main] Initializing Spring embedded WebApplicationContext
+2025-01-20 12:14:07,041 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 28771 ms
+2025-01-20 12:14:13,648 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-20 12:14:13,853 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.10.Final
+2025-01-20 12:14:14,542 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-01-20 12:14:15,302 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2025-01-20 12:14:16,261 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-01-20 12:14:16,290 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-20 12:14:17,347 INFO org.springframework.jdbc.core.metadata.TableMetaDataProvider [main] Unable to locate table meta-data for 'ai_license': column names must be provided
+2025-01-20 12:14:18,854 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-20 12:14:19,822 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [main] Adding welcome page: class path resource [static/index.html]
+2025-01-20 12:14:21,593 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-01-20 12:14:21,723 INFO org.apache.coyote.http11.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-01-20 12:14:21,845 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path '/aiv'
+2025-01-20 12:14:21,909 INFO com.aiv.core.aiv.AivApplication [main] Started AivApplication in 46.299 seconds (JVM running for 50.846)
+2025-01-20 12:14:28,507 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/aiv] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-20 12:14:28,508 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-01-20 12:14:28,512 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 4 ms
+2025-01-20 12:14:36,646 INFO security [http-nio-8080-exec-5] Classname: class com.security.services.SimpleAuthImpl message is {"Traceid":"","message":" Reading user Default properties is reuqired: Admin"}
